@@ -14,7 +14,6 @@ express-socketio demo
 ```bash
 git clone https://github.com/theashraf/express-socketio
 cd express-socketio
-cp sample.env .env
 npm run setup && npm start
 ```
 
