@@ -1,0 +1,6 @@
+{
+	"linters": {
+		"**/*.js": ["prettier --write", "eslint","git add"]
+	},
+	"ignore":["build"]
+}

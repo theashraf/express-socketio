@@ -1,0 +1,65 @@
+{
+	"name": "express-socketio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"format": "prettier --write \"**/*.+(js)\"",
+		"lint": "eslint \"**/*.+(js)\"",
+		"start": "node build",
+		"dev": "nodemon --ext js --exec babel-node src",
+		"build": "rimraf build && babel src --out-dir build --copy-files",
+		"setup": "npm install && rimraf build && npm run build",
+		"precommit": "lint-staged",
+		"commit": "git-cz",
+		"update-pkg": "npx npm-check -u"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"cors": "2.8.5",
+		"express": "4.16.4",
+		"express-promise-router": "3.0.3",
+		"hbs": "4.0.2",
+		"helmet": "3.15.1",
+		"joi": "14.3.1",
+		"lodash": "4.17.11",
+		"morgan": "1.9.1",
+		"multer": "1.4.1",
+		"socket.io": "2.2.0",
+		"winston": "3.2.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "7.2.3",
+		"@babel/core": "7.3.4",
+		"@babel/node": "7.2.2",
+		"@babel/plugin-transform-runtime": "7.3.4",
+		"@babel/plugin-transform-spread": "7.2.2",
+		"@babel/preset-env": "7.3.4",
+		"@babel/runtime": "7.3.4",
+		"@commitlint/cli": "7.5.2",
+		"@commitlint/config-conventional": "7.5.0",
+		"commitizen": "3.0.7",
+		"cz-conventional-changelog": "2.1.0",
+		"dotenv": "6.2.0",
+		"eslint": "5.14.1",
+		"eslint-config-prettier": "4.1.0",
+		"eslint-plugin-prettier": "3.0.1",
+		"husky": "1.3.1",
+		"lint-staged": "8.1.4",
+		"nodemon": "1.18.10",
+		"prettier": "1.16.4"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+			"pre-commit": "lint-staged"
+		}
+	}
+}

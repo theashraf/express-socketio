@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Home</title>
+</head>
+
+<body>
+	<input type="text" id="name" placeholder="enter your name" />
+	<button id="enter">enter</button>
+	<script>
+		document.getElementById("enter").addEventListener("click", function () {
+			const name = document.getElementById("name").value;
+			if (!name) alert("please enter a valid name");
+			window.location.href = "http://localhost:3000/chat?id=" + name;
+		});
+	</script>
+</body>
+
+</html>
