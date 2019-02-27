@@ -1,5 +1,7 @@
 # express-socketio
 
+[![Build Status](https://travis-ci.org/theashraf/express-socketio.svg?branch=master)](https://travis-ci.org/theashraf/express-socketio)
+
 express-socketio demo
 
 # Features
